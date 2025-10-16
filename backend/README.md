@@ -17,4 +17,4 @@
    npm run dev
 
 Server runs at http://localhost:5000
-Health: GET /api/health
+
