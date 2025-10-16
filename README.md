@@ -1,4 +1,4 @@
-Meatec - Full-Stack Task Manager
+Meatec - Full-Stack Task Manager         RENDER LINK https://meatec-2.onrender.com
 Meatec is a complete full-stack web application that allows users to register, log in, and manage their daily tasks. It features a secure REST API backend built with Node.js and a reactive frontend built with React.
 # Tech Stack
 Frontend: React, Redux Toolkit, Vite, Tailwind CSS
