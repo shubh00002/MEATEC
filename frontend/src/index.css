@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-blue-400 text-gray-700 font-sans;
+}
+
+input {
+  @apply border border-gray-200 rounded p-2;
+}
+
+input:focus {
+  @apply ring-2 ring-blue-500/25;
+}
+
+button {
+  @apply rounded p-2 font-medium transition-colors;
+}

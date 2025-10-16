@@ -1,0 +1,30 @@
+// meatec/backend/prisma/schema.prisma
+
+generator client {
+  provider        = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  username  String   @unique
+  password  String
+  tasks     Task[]
+  createdAt DateTime @default(now())
+}
+
+model Task {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String?
+  status      String   @default("pending") // "pending" | "completed"
+  createdAt   DateTime @default(now())
+
+  // Relation to User
+  userId String @db.ObjectId
+  user   User   @relation(fields: [userId], references: [id])
+}
